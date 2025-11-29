@@ -1,0 +1,38 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+const projects = [
+{
+    title: "CRM Immobilier",
+    description: "Application CRM complète pour agences, propriétaires et locataires.",
+    tech: "Laravel, Vue.js, Docker, API REST",
+    link: "#"
+},
+{
+    title: "Gestion Tournois Badminton",
+    description: "Application web pour organiser des tournois.",
+    tech: "Laravel, Inertia, Vue.js",
+    link: "#"
+},
+{
+    title: "Blog Club Badminton",
+    description: "Site WordPress optimisé SEO pour un club sportif.",
+    tech: "WordPress, SEO, Bénévolat",
+    link: "https://www.fdvvarangeville.fr"
+},
+{
+    title: "Notre-Dame Beauvais",
+    description: "Site WordPress optimisé SEO pour un ensemble scolaire.",
+    tech: "WordPress, SEO, Freelance",
+    link: "https://notredamebeauvais.com/"
+},
+];
+---
+<section class="py-12">
+    <h2 class="text-3xl font-bold text-orange-400 mb-8">Mes projets</h2>
+
+    <div class="grid gap-8 md:grid-cols-2">
+        {projects.map(project => (
+            <ProjectCard {...project} />
+        ))}
+    </div>
+</section>

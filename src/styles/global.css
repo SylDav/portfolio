@@ -1,0 +1,54 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+:root {
+--bg-main: #0A0F1F;
+--bg-card: #111827;
+--border: rgba(255, 255, 255, 0.05);
+--text-main: #F3F4F6;
+--text-muted: #9CA3AF;
+--accent: #F97316;
+}
+
+
+body {
+background: var(--bg-main);
+color: var(--text-main);
+font-family: Inter, sans-serif;
+line-height: 1.7;
+}
+
+
+section {
+margin-top: 4rem;
+margin-bottom: 4rem;
+}
+
+
+.card {
+background: var(--bg-card);
+border: 1px solid var(--border);
+padding: 1.5rem;
+border-radius: 0.8rem;
+transition: transform .2s ease, border .2s ease;
+}
+.card:hover {
+transform: translateY(-4px);
+border-color: rgba(249, 115, 22, 0.4);
+}
+
+
+.btn-primary {
+background: var(--accent);
+padding: 0.75rem 1.5rem;
+color: white;
+border-radius: 0.5rem;
+font-weight: 600;
+transition: opacity .2s ease;
+}
+.btn-primary:hover {
+opacity: 0.8;
+}
