@@ -9,15 +9,13 @@ const experiences = [
     duration: "2022 - 2024",
     location: "Paris, France",
     type: "CDI",
-    description: "Développement et maintenance d'une plateforme CRM pour plus de 200 agences immobilières. Architecture microservices et optimisation des performances.",
+    description: "Développement CRM pour 200+ agences immobilières avec architecture microservices et optimisation des performances.",
     achievements: [
-      "Conception et développement du CRM de A à Z",
-      "Optimisation des performances : temps de chargement réduit de 60%",
-      "Mise en place d'architecture microservices avec Docker",
-      "Formation de 3 développeurs juniors",
-      "Réduction des bugs critiques de 75% grâce aux tests automatisés"
+      "CRM de A à Z avec 60% de performance en plus",
+      "Architecture microservices Docker",
+      "Formation équipe et réduction 75% des bugs critiques"
     ],
-    technologies: ["PHP", "Laravel", "Vue.js", "Docker", "MySQL", "Redis", "API REST", "Git"]
+    technologies: ["PHP", "Laravel", "Vue.js", "Docker", "MySQL"]
   },
   {
     company: "Startup Tech Innov",
@@ -25,83 +23,46 @@ const experiences = [
     duration: "2020 - 2022", 
     location: "Lyon, France",
     type: "CDI",
-    description: "Participation au développement d'une plateforme SaaS pour la gestion d'événements sportifs. Travail en équipe agile avec méthodologie Scrum.",
+    description: "Plateforme SaaS gestion événements sportifs en équipe agile. API REST et migration architecture modulaire.",
     achievements: [
-      "Développement du système de gestion de tournois en temps réel",
-      "Intégration de solutions de paiement en ligne",
-      "API REST consommée par 10+ applications partenaires",
-      "Migration de monolith vers architecture modulaire"
+      "Système tournois temps réel",
+      "API REST pour 10+ partenaires",
+      "Migration monolith vers modules"
     ],
-    technologies: ["PHP", "Symfony", "React", "Node.js", "PostgreSQL", "WebSocket", "Stripe API"]
+    technologies: ["PHP", "Symfony", "React", "PostgreSQL", "WebSocket"]
   },
   {
-    company: "Clients Freelance",
-    position: "Développeur Web Freelance",
-    duration: "2019 - 2020",
+    company: "Freelance & Bénévolat",
+    position: "Développeur Web",
+    duration: "2018 - 2020",
     location: "Remote, France",
     type: "Freelance",
-    description: "Développement de sites web sur mesure pour PME et associations. Focus sur WordPress, SEO et performance.",
+    description: "Sites web sur mesure pour PME, associations et club sportif. Focus WordPress, SEO et performance.",
     achievements: [
-      "Création de 15+ sites WordPress optimisés SEO",
-      "Amélioration moyenne du référencement de 40%",
-      "Formation clients à l'utilisation de leurs sites",
-      "Maintenance et support technique continu"
+      "15+ sites WordPress optimisés SEO",
+      "Référencement +40% en moyenne",
+      "Formation clients et maintenance continue"
     ],
-    technologies: ["WordPress", "PHP", "SEO", "JavaScript", "MySQL", "WooCommerce"]
-  },
-  {
-    company: "Club Badminton FDV Varangeville",
-    position: "Développeur Web Bénévole",
-    duration: "2018 - 2019",
-    location: "Varangeville, France", 
-    type: "Bénévolat",
-    description: "Création et maintenance du site web du club sportif local. Gestion des actualités, calendrier et galeries photos.",
-    achievements: [
-      "Site web moderne et responsive pour le club",
-      "Système de publication d'actualités simplifié",
-      "Galerie photos avec plus de 500 images",
-      "Référencement premier page sur 'badminton varangeville'"
-    ],
-    technologies: ["WordPress", "SEO", "PHP", "HTML/CSS", "Photographie"]
+    technologies: ["WordPress", "PHP", "SEO", "JavaScript"]
   }
 ];
 ---
-<section id="experience" class="py-24">
-  <div class="text-center mb-16">
+<section id="experience" class="py-20">
+  <div class="text-center mb-12">
     <SectionTitle
-      title="Mon Parcours Professionnel"
+      title="Mon Parcours"
       subtitle="Une expérience riche et variée du développement web"
     />
-    
-    <!-- Stats overview -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 max-w-4xl mx-auto">
-      <div class="text-center">
-        <div class="text-3xl font-bold text-accent mb-1">6+</div>
-        <div class="text-muted text-sm">Années d'expérience</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl font-bold text-accent mb-1">50+</div>
-        <div class="text-muted text-sm">Projets réalisés</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl font-bold text-accent mb-1">15+</div>
-        <div class="text-muted text-sm">Technologies maîtrisées</div>
-      </div>
-      <div class="text-center">
-        <div class="text-3xl font-bold text-accent mb-1">200+</div>
-        <div class="text-muted text-sm">Clients satisfaits</div>
-      </div>
-    </div>
   </div>
 
-  <!-- Timeline -->
+  <!-- Timeline compacte -->
   <div class="max-w-4xl mx-auto">
     <div class="relative">
       <!-- Timeline line -->
       <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-border"></div>
       
       <!-- Experience cards -->
-      <div class="space-y-12">
+      <div class="space-y-8">
         {experiences.map((experience, index) => (
           <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
             <!-- Timeline dot -->
@@ -117,8 +78,8 @@ const experiences = [
     </div>
   </div>
   
-  <!-- CTA -->
-  <div class="text-center mt-16">
+  <!-- CTA simplifié -->
+  <div class="text-center mt-12">
     <a href="#contact" class="btn-primary inline-flex items-center gap-2">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
