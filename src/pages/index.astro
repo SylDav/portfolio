@@ -1,11 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
-import Skills from "../components/Skills.astro";
-import ProjectsList from "../components/ProjectsList.astro";
+import About from "../components/About.astro";
+import Socials from "../components/Socials.astro";
+import Projects from "../components/ProjectsList.astro";
+import Experiences from "../components/ExperienceList.astro";
+import Contact from "../components/ContactForm.astro";
+import CvSection from "../components/CvSection.astro";
 ---
-<BaseLayout title="Accueil - Portfolio">
-	<Hero />
-	<Skills />
-	<ProjectsList />
+
+<BaseLayout title="Sylvain DAVID - Développeur Web">
+  <Hero />
+  <Projects />
+  <Experiences />
+  <CvSection />
+  <Contact />
 </BaseLayout>

@@ -1,5 +1,7 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
+import SectionTitle from "./SectionTitle.astro";
+
 const projects = [
 {
     title: "CRM Immobilier",
@@ -27,8 +29,11 @@ const projects = [
 },
 ];
 ---
-<section class="py-12">
-    <h2 class="text-3xl font-bold text-orange-400 mb-8">Mes projets</h2>
+<section id="projects" class="py-24">
+  <SectionTitle
+    title="Projets"
+    subtitle="Quelques projets dont je suis fier."
+  />
 
     <div class="grid gap-8 md:grid-cols-2">
         {projects.map(project => (
