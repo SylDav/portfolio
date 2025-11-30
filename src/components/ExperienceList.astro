@@ -1,22 +1,129 @@
 ---
+import ExperienceCard from "./ExperienceCard.astro";
 import SectionTitle from "./SectionTitle.astro";
+
+const experiences = [
+  {
+    company: "Groupe Immobiliier Pro",
+    position: "Développeur Web Senior",
+    duration: "2022 - 2024",
+    location: "Paris, France",
+    type: "CDI",
+    description: "Développement et maintenance d'une plateforme CRM pour plus de 200 agences immobilières. Architecture microservices et optimisation des performances.",
+    achievements: [
+      "Conception et développement du CRM de A à Z",
+      "Optimisation des performances : temps de chargement réduit de 60%",
+      "Mise en place d'architecture microservices avec Docker",
+      "Formation de 3 développeurs juniors",
+      "Réduction des bugs critiques de 75% grâce aux tests automatisés"
+    ],
+    technologies: ["PHP", "Laravel", "Vue.js", "Docker", "MySQL", "Redis", "API REST", "Git"]
+  },
+  {
+    company: "Startup Tech Innov",
+    position: "Développeur Full-Stack",
+    duration: "2020 - 2022", 
+    location: "Lyon, France",
+    type: "CDI",
+    description: "Participation au développement d'une plateforme SaaS pour la gestion d'événements sportifs. Travail en équipe agile avec méthodologie Scrum.",
+    achievements: [
+      "Développement du système de gestion de tournois en temps réel",
+      "Intégration de solutions de paiement en ligne",
+      "API REST consommée par 10+ applications partenaires",
+      "Migration de monolith vers architecture modulaire"
+    ],
+    technologies: ["PHP", "Symfony", "React", "Node.js", "PostgreSQL", "WebSocket", "Stripe API"]
+  },
+  {
+    company: "Clients Freelance",
+    position: "Développeur Web Freelance",
+    duration: "2019 - 2020",
+    location: "Remote, France",
+    type: "Freelance",
+    description: "Développement de sites web sur mesure pour PME et associations. Focus sur WordPress, SEO et performance.",
+    achievements: [
+      "Création de 15+ sites WordPress optimisés SEO",
+      "Amélioration moyenne du référencement de 40%",
+      "Formation clients à l'utilisation de leurs sites",
+      "Maintenance et support technique continu"
+    ],
+    technologies: ["WordPress", "PHP", "SEO", "JavaScript", "MySQL", "WooCommerce"]
+  },
+  {
+    company: "Club Badminton FDV Varangeville",
+    position: "Développeur Web Bénévole",
+    duration: "2018 - 2019",
+    location: "Varangeville, France", 
+    type: "Bénévolat",
+    description: "Création et maintenance du site web du club sportif local. Gestion des actualités, calendrier et galeries photos.",
+    achievements: [
+      "Site web moderne et responsive pour le club",
+      "Système de publication d'actualités simplifié",
+      "Galerie photos avec plus de 500 images",
+      "Référencement premier page sur 'badminton varangeville'"
+    ],
+    technologies: ["WordPress", "SEO", "PHP", "HTML/CSS", "Photographie"]
+  }
+];
 ---
+<section id="experience" class="py-24">
+  <div class="text-center mb-16">
+    <SectionTitle
+      title="Mon Parcours Professionnel"
+      subtitle="Une expérience riche et variée du développement web"
+    />
+    
+    <!-- Stats overview -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-accent mb-1">6+</div>
+        <div class="text-muted text-sm">Années d'expérience</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-accent mb-1">50+</div>
+        <div class="text-muted text-sm">Projets réalisés</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-accent mb-1">15+</div>
+        <div class="text-muted text-sm">Technologies maîtrisées</div>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-accent mb-1">200+</div>
+        <div class="text-muted text-sm">Clients satisfaits</div>
+      </div>
+    </div>
+  </div>
 
-<section id="experiences" class="py-24">
-  <SectionTitle
-    title="Expériences professionnelles"
-    subtitle="Mon parcours et les postes que j'ai occupés."
-  />
-
-  <ul class="space-y-6 max-w-3xl mx-auto">
-    <li class="card">
-      <strong>2024 - Aujourd'hui — Développeur Web Back-end</strong><br />
-      PHP, Laravel, Symfony, Docker — développement d'un CRM immobilier.
-    </li>
-
-    <li class="card">
-      <strong>2023 — Développeur Web Freelance</strong><br />
-      WordPress, SEO, refonte de sites, Vue.js.
-    </li>
-  </ul>
+  <!-- Timeline -->
+  <div class="max-w-4xl mx-auto">
+    <div class="relative">
+      <!-- Timeline line -->
+      <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-border"></div>
+      
+      <!-- Experience cards -->
+      <div class="space-y-12">
+        {experiences.map((experience, index) => (
+          <div class={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+            <!-- Timeline dot -->
+            <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-bg-main z-10"></div>
+            
+            <!-- Card -->
+            <div class={`ml-16 md:ml-0 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'} md:w-5/12`}>
+              <ExperienceCard {...experience} />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+  <!-- CTA -->
+  <div class="text-center mt-16">
+    <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+      Discutons de votre projet
+    </a>
+  </div>
 </section>

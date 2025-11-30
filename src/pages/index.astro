@@ -6,13 +6,15 @@ import Socials from "../components/Socials.astro";
 import Projects from "../components/ProjectsList.astro";
 import Experiences from "../components/ExperienceList.astro";
 import Contact from "../components/ContactForm.astro";
-import CvSection from "../components/CvSection.astro";
 ---
 
-<BaseLayout title="Sylvain DAVID - Développeur Web">
+<BaseLayout 
+  title="Sylvain DAVID | Développeur Web Freelance - PHP, Laravel, Symfony, Vue.js" 
+  description="Développeur Web Freelance spécialisé PHP, Laravel, Symfony et Vue.js. Création d'applications web robustes, scalables et performantes. Disponible pour vos projets."
+>
   <Hero />
+  <About />
   <Projects />
   <Experiences />
-  <CvSection />
   <Contact />
 </BaseLayout>

@@ -3,41 +3,72 @@ import ProjectCard from "./ProjectCard.astro";
 import SectionTitle from "./SectionTitle.astro";
 
 const projects = [
-{
+  {
     title: "CRM Immobilier",
-    description: "Application CRM complète pour agences, propriétaires et locataires.",
-    tech: "Laravel, Vue.js, Docker, API REST",
-    link: "#"
-},
-{
+    description: "Application CRM complète que j'ai conçue et développée de A à Z pour les agences immobilières. Gestion des propriétaires, locataires, biens et tableaux de bord analytiques.",
+    tech: ["PHP", "Laravel", "Vue.js", "Docker", "API REST"],
+    link: "https://demo-crm-immobilier.com",
+    github: "https://github.com/sylvaindavid/crm-immobilier",
+    image: "/projects/crm-immobilier.jpg"
+  },
+  {
     title: "Gestion Tournois Badminton",
-    description: "Application web pour organiser des tournois.",
-    tech: "Laravel, Inertia, Vue.js",
-    link: "#"
-},
-{
+    description: "Application web pour l'organisation complète de tournois sportifs. Système de brackets automatisés, inscriptions en ligne et résultats en temps réel.",
+    tech: ["PHP", "Laravel", "Inertia", "Vue.js"],
+    link: "https://demo-tournois.fr",
+    github: "https://github.com/sylvaindavid/tournois-badminton",
+    image: "/projects/tournois-badminton.jpg"
+  },
+  {
     title: "Blog Club Badminton",
-    description: "Site WordPress optimisé SEO pour un club sportif.",
-    tech: "WordPress, SEO, Bénévolat",
-    link: "https://www.fdvvarangeville.fr"
-},
-{
-    title: "Notre-Dame Beauvais",
-    description: "Site WordPress optimisé SEO pour un ensemble scolaire.",
-    tech: "WordPress, SEO, Freelance",
-    link: "https://notredamebeauvais.com/"
-},
+    description: "Site WordPress sur mesure créé pour un club sportif local. Optimisation SEO avancée, calendrier des événements et galeries photos interactives.",
+    tech: ["WordPress", "SEO", "PHP"],
+    link: "https://www.fdvvarangeville.fr",
+    image: "/projects/blog-badminton.jpg"
+  },
+  {
+    title: "Site École Notre-Dame",
+    description: "Site institutionnel moderne développé pour un ensemble scolaire. Espace parents, actualités et système d'inscription en ligne avec performances optimisées.",
+    tech: ["WordPress", "SEO", "PHP"],
+    link: "https://notredamebeauvais.com/",
+    image: "/projects/notredame-beauvais.jpg"
+  }
 ];
 ---
 <section id="projects" class="py-24">
-  <SectionTitle
-    title="Projets"
-    subtitle="Quelques projets dont je suis fier."
-  />
-
-    <div class="grid gap-8 md:grid-cols-2">
-        {projects.map(project => (
-            <ProjectCard {...project} />
-        ))}
+  <div class="text-center mb-16">
+    <SectionTitle
+      title="Mes Réalisations"
+      subtitle="Projets personnels et freelance dont je suis particulièrement fier"
+    />
+    
+    <!-- Project types filter -->
+    <div class="flex justify-center gap-2 mt-8">
+      <button class="px-4 py-2 bg-accent text-white rounded-lg text-sm font-medium">Tous</button>
+      <button class="px-4 py-2 bg-card border border-border rounded-lg text-sm hover:bg-card/80 transition-colors">Web Apps</button>
+      <button class="px-4 py-2 bg-card border border-border rounded-lg text-sm hover:bg-card/80 transition-colors">Sites Web</button>
+      <button class="px-4 py-2 bg-card border border-border rounded-lg text-sm hover:bg-card/80 transition-colors">Open Source</button>
     </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+    {projects.map((project, index) => (
+      <ProjectCard {...project} key={index} />
+    ))}
+  </div>
+  
+  <!-- Link to experience for more context -->
+  <div class="text-center mt-12 space-y-4">
+    <p class="text-muted text-sm">
+      Découvrez aussi <a href="#experience" class="text-accent hover:underline">mon expérience en entreprise</a> 
+      avec des projets de plus grande envergure
+    </p>
+    <a href="#contact" class="btn-primary inline-flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      </svg>
+      Parlons de votre prochain projet
+    </a>
+  </div>
 </section>

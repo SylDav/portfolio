@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const { title } = Astro.props;
+const { title, description = "Sylvain DAVID - Développeur Web Freelance spécialisé PHP, Laravel, Symfony et Vue.js. Création d'applications web robustes et performantes." } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -10,6 +10,58 @@ import Footer from "../components/Footer.astro";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
+        <meta name="description" content={description} />
+        
+        <!-- SEO Meta Tags -->
+        <meta name="keywords" content="développeur web, freelance, PHP, Laravel, Symfony, Vue.js, Docker, développement web, applications web" />
+        <meta name="author" content="Sylvain DAVID" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={Astro.url} />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/og-image.jpg" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="/og-image.jpg" />
+        
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Sylvain DAVID",
+            "jobTitle": "Développeur Web Freelance",
+            "description": "Développeur Web spécialisé PHP, Laravel, Symfony et Vue.js",
+            "url": "https://sylvain-david.com",
+            "sameAs": [
+                "https://github.com/sylvaindavid",
+                "https://linkedin.com/in/sylvaindavid"
+            ],
+            "knowsAbout": ["PHP", "Laravel", "Symfony", "Vue.js", "Docker", "JavaScript", "MySQL", "API REST"],
+            "offers": {
+                "@type": "Service",
+                "serviceType": "Développement Web",
+                "description": "Création d'applications web robustes et performantes"
+            }
+        }
+        </script>
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        
+        <!-- Preconnect for performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     </head>
     <body class="min-h-screen flex flex-col">
         <Navbar />

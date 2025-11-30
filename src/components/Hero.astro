@@ -1,37 +1,73 @@
-<!-- <section class="py-20 text-center">
-    <h1 class="text-5xl font-bold mb-4 text-gray-100">
-        Bonjour, je suis <span class="text-orange-400">Développeur Web Back</span>
-    </h1>
-    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-        Spécialisé en PHP (Laravel, Symfony), Vue.js, Docker et création d'applications web modernes.
-        Spécialisé en PHP, Laravel, Symfony, Vue.js et Docker.
-        Je crée des applications web fiables, performantes et conçues pour durer.
-    </p>
-</section> -->
-<section id="hero" class="py-32">
-  <div class="grid md:grid-cols-2 items-center gap-12">
+<section id="hero" class="min-h-[90vh] flex items-center py-16 md:py-20">
+  <div class="grid md:grid-cols-2 items-center gap-12 w-full">
 
     <!-- IMAGE -->
-    <div class="flex justify-center">
-      <img
-        src="/me.jpeg"
-        alt="Photo de Sylvain"
-        class="w-60 h-60 rounded-2xl object-cover border-2"
-        style="border-color: var(--accent);"
-      />
+    <div class="flex justify-center order-2 md:order-1">
+      <div class="relative">
+        <img
+          src="/me.jpeg"
+          alt="Photo de Sylvain DAVID, développeur web freelance"
+          class="w-64 h-64 rounded-2xl object-cover border-4 shadow-2xl"
+          style="border-color: var(--accent);"
+          loading="eager"
+        />
+        <!-- Badge de statut -->
+        <div class="absolute -bottom-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+          Disponible pour vos projets
+        </div>
+      </div>
     </div>
 
     <!-- TEXT -->
-    <div>
-      <h1 class="text-5xl font-bold mb-4">
+    <div class="order-1 md:order-2 text-center md:text-left">
+      <!-- Badge spécialisation -->
+      <div class="inline-flex items-center bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6">
+        <span class="text-accent font-medium">Développeur Web Freelance</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
         Salut, moi c'est <span class="text-accent">Sylvain</span> 👋
       </h1>
 
-      <p class="text-muted text-lg leading-relaxed max-w-xl">
-        Développeur Web spécialisé PHP, Laravel, Symfony et Docker.
-        J’aime concevoir des applications robustes, scalables, 
-        avec une architecture propre et un front moderne en Vue.js.
+      <p class="text-muted text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
+        Spécialisé <strong>PHP, Laravel, Symfony</strong> et <strong>Vue.js</strong>. 
+        Je conçois des applications web <strong>robustes, scalables</strong> avec une architecture propre et des performances optimales.
       </p>
+      
+      <!-- Skills tags -->
+      <div class="flex flex-wrap gap-2 mb-8 justify-center md:justify-start">
+        <span class="px-3 py-1 bg-card border border-border rounded-full text-sm">PHP</span>
+        <span class="px-3 py-1 bg-card border border-border rounded-full text-sm">Laravel</span>
+        <span class="px-3 py-1 bg-card border border-border rounded-full text-sm">Symfony</span>
+        <span class="px-3 py-1 bg-card border border-border rounded-full text-sm">Vue.js</span>
+        <span class="px-3 py-1 bg-card border border-border rounded-full text-sm">Docker</span>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="#contact" class="btn-primary inline-flex items-center justify-center gap-2 hover:scale-105 transition-transform">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Me contacter
+        </a>
+        <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border rounded-lg hover:bg-card transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+          </svg>
+          Voir mes projets
+        </a>
+        <a 
+          href="/cv_sylvain_david.pdf" 
+          download
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-accent/30 rounded-lg hover:bg-accent/10 transition-colors text-accent"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          Télécharger CV
+        </a>
+      </div>
     </div>
 
   </div>
