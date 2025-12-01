@@ -6,7 +6,7 @@ import SectionTitle from "./SectionTitle.astro";
   <div class="text-center mb-16">
     <SectionTitle
       title="Contactez-moi"
-      subtitle="Envie de collaborer sur un projet ou simplement échanger ? Je suis à votre écoute."
+      subtitle="Opportunité CDI, projet impactant ou collaboration ? Je suis à votre écoute pour discuter de votre prochain défi technique."
     />
     
     <!-- Contact info -->
@@ -74,19 +74,15 @@ import SectionTitle from "./SectionTitle.astro";
         <label for="subject" class="block text-sm font-medium text-text-main">
           Objet <span class="text-accent">*</span>
         </label>
-        <select
+        <input
+          type="text"
           id="subject"
           name="subject"
           required
-          class="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-text-main"
-        >
-          <option value="">Sélectionnez un objet</option>
-          <option value="projet">Projet freelance</option>
-          <option value="emploi">Opportunité d'emploi</option>
-          <option value="collaboration">Collaboration</option>
-          <option value="autre">Autre</option>
-        </select>
-        <span class="text-xs text-muted hidden" id="subject-error">Veuillez sélectionner un objet</span>
+          class="w-full px-4 py-3 bg-card border border-border rounded-lg focus:ring-2 focus:ring-accent/50 focus:border-accent transition-all text-text-main placeholder-text-muted"
+          placeholder="Ex: Opportunité CDI, Projet santé, Collaboration..."
+        />
+        <span class="text-xs text-muted hidden" id="subject-error">Veuillez entrer un objet</span>
       </div>
 
       <!-- Message Field -->
@@ -156,7 +152,7 @@ import SectionTitle from "./SectionTitle.astro";
           
           <!-- Alternative contact -->
           <a
-            href="mailto:contact@sylvain-dev.fr"
+            href="mailto:sylvain.david.60@gmail.com"
             class="inline-flex items-center justify-center gap-2 px-6 py-3 border border-border rounded-lg hover:bg-card transition-colors text-sm"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
