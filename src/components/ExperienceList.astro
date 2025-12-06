@@ -4,58 +4,83 @@ import SectionTitle from "./SectionTitle.astro";
 
 const experiences = [
   {
-    company: "Groupe Immobiliier Pro",
-    position: "Développeur Web Senior",
-    duration: "2022 - 2024",
-    location: "Paris, France",
+    company: "Global Courtage",
+    position: "Développeur Web full-stack",
+    duration: "2022 - 2025",
+    location: "Nancy, France",
     type: "CDI",
-    description: "Développement CRM pour 200+ agences immobilières avec architecture microservices et optimisation des performances.",
+    description: "Développement et maintenance de plateforme CRM pour courtiers immobiliers. Architecture microservices et optimisation des performances.",
     achievements: [
-      "CRM de A à Z avec 60% de performance en plus",
-      "Architecture microservices Docker",
-      "Formation équipe et réduction 75% des bugs critiques"
+      "Architecture et développement API REST complète de l'application",
+      "Module de facturation avec génération PDF",
+      "Connexions API externes : Assurea (assurances) et YouSign (signature électronique)",
+      "Tests E2E automatisés avec Laravel Dusk (couverture complète)",
+      "Développement module collaboratif avec équipe Vue.js et graphiques dynamiques"
     ],
-    technologies: ["PHP", "Laravel", "Vue.js", "Docker", "MySQL"]
+    technologies: ["PHP", "Laravel", "Vue.js", "Docker", "MySQL", "API REST"]
   },
   {
-    company: "Startup Tech Innov",
-    position: "Développeur Full-Stack",
-    duration: "2020 - 2022", 
-    location: "Lyon, France",
-    type: "CDI",
-    description: "Plateforme SaaS gestion événements sportifs en équipe agile. API REST et migration architecture modulaire.",
+    company: "Adjutem, Nil0bstat, Peri-G (missions CDD successives)",
+    position: "Développeur PHP/Symfony",
+    duration: "2018 - 2022", 
+    location: "Amiens, France",
+    type: "CDD",
+    description: "Développement d'applications backend spécialisées pour différents secteurs (menuiserie, logistique, services). Architecture modulaire et intégration d'API partenaires.",
     achievements: [
-      "Système tournois temps réel",
-      "API REST pour 10+ partenaires",
-      "Migration monolith vers modules"
+      "Applications backend avec Symfony et CodeIgniter",
+      "Intégration API partenaires (Butagaz, LaPoste, etc.)",
+      "Développement configurateurs produits et services",
+      "Modules de calculs fiscaux et tarification",
+      "Migration legacy vers architectures modernes"
     ],
-    technologies: ["PHP", "Symfony", "React", "PostgreSQL", "WebSocket"]
+    technologies: ["PHP", "Symfony", "CodeIgniter", "API REST", "MySQL", "Intégration API"]
   },
   {
     company: "Freelance & Bénévolat",
     position: "Développeur Web",
-    duration: "2018 - 2020",
+    duration: "2018 & 2022",
     location: "Remote, France",
     type: "Freelance",
-    description: "Sites web sur mesure pour PME, associations et club sportif. Focus WordPress, SEO et performance.",
+    description: "Développement sites web pour PME et associations. Focus WordPress, SEO et performance. Gestion complète de A à Z des projets.",
     achievements: [
-      "15+ sites WordPress optimisés SEO",
-      "Référencement +40% en moyenne",
+      "Site web ensemble scolaire Notre-Dame (freelance)",
+      "Blog club badminton FDV (bénévolat)",
+      "Sites WordPress optimisés SEO",
       "Formation clients et maintenance continue"
     ],
-    technologies: ["WordPress", "PHP", "SEO", "JavaScript"]
+    technologies: ["WordPress", "PHP", "SEO", "JavaScript", "MySQL"]
   }
 ];
 ---
-<section id="experience" class="py-20">
-  <div class="text-center mb-12">
+<section id="experience" class="py-20 bg-card/50">
+  <div class="text-center mb-16">
     <SectionTitle
-      title="Mon Parcours"
-      subtitle="Une expérience riche et variée du développement web"
+      title="Parcours Professionnel"
+      subtitle="5 ans d'expérience en développement web avec focus sur la qualité et l'innovation"
     />
+    
+    <!-- Expertise highlights -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 max-w-4xl mx-auto">
+      <div class="text-center">
+        <div class="text-2xl font-bold text-accent mb-1">5</div>
+        <div class="text-muted text-sm">Ans d'expérience</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-accent mb-1">200+</div>
+        <div class="text-muted text-sm">Courtiers immobiliers</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-accent mb-1">5+</div>
+        <div class="text-muted text-sm">API intégrées</div>
+      </div>
+      <div class="text-center">
+        <div class="text-2xl font-bold text-accent mb-1">100%</div>
+        <div class="text-muted text-sm">Tests E2E</div>
+      </div>
+    </div>
   </div>
 
-  <!-- Timeline compacte -->
+  <!-- Timeline -->
   <div class="max-w-4xl mx-auto">
     <div class="relative">
       <!-- Timeline line -->
@@ -78,13 +103,13 @@ const experiences = [
     </div>
   </div>
   
-  <!-- CTA simplifié -->
-  <div class="text-center mt-12">
-    <a href="#contact" class="btn-primary inline-flex items-center gap-2">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+  <!-- CTA fort pour CDI -->
+  <div class="text-center mt-16">
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/30 rounded-full">
+      <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
       </svg>
-      Discutons de votre projet
-    </a>
+      <span class="text-accent font-medium">Ouvert aux opportunités CDI</span>
+    </div>
   </div>
 </section>

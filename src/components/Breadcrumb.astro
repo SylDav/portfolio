@@ -1,0 +1,29 @@
+---
+export interface Props {
+  items: Array<{
+    name: string;
+    href?: string;
+  }>;
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="flex items-center space-x-2 text-sm text-muted mb-4">
+  {items.map((item, index) => (
+    <>
+      {index > 0 && (
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      )}
+      {item.href ? (
+        <a href={item.href} class="hover:text-accent transition-colors">
+          {item.name}
+        </a>
+      ) : (
+        <span class="text-text-main font-medium">{item.name}</span>
+      )}
+    </>
+  ))}
+</nav>

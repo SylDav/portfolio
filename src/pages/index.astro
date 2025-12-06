@@ -1,17 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SEO from "../components/SEO.astro";
+import StructuredData from "../components/StructuredData.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
-import Socials from "../components/Socials.astro";
 import Projects from "../components/ProjectsList.astro";
 import Experiences from "../components/ExperienceList.astro";
 import Contact from "../components/ContactForm.astro";
 ---
 
-<BaseLayout 
-  title="Sylvain DAVID | Développeur Web Freelance - PHP, Laravel, Symfony, Vue.js" 
-  description="Développeur Web Freelance spécialisé PHP, Laravel, Symfony et Vue.js. Création d'applications web robustes, scalables et performantes. Disponible pour vos projets."
->
+<BaseLayout>
+  <SEO 
+    title="Accueil"
+    description="Développeur Web Confirmé avec 5 ans d'expérience en PHP, Laravel, Symfony et Vue.js. Autodidacte et adaptable, recherche CDI dans la santé ou l'impact social."
+    keywords={["développeur web", "CDI", "PHP", "Laravel", "Symfony", "Vue.js", "santé", "impact social", "autodidacte", "confirmé"]}
+    type="WebPage"
+  />
+  <StructuredData type="Person" />
+  
   <Hero />
   <About />
   <Projects />

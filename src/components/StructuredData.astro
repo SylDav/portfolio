@@ -1,0 +1,57 @@
+---
+export interface Props {
+  type: "Person" | "WebPage" | "Article";
+  data?: Record<string, any>;
+}
+
+const { type, data = {} } = Astro.props;
+
+const baseData = {
+  "@context": "https://schema.org",
+  "@type": type,
+  ...data
+};
+
+const structuredData = {
+  Person: {
+    name: "Sylvain DAVID",
+    jobTitle: "Développeur Web Confirmé",
+    description: "Développeur Web Confirmé spécialisé PHP, Laravel, Symfony et Vue.js. Recherche CDI dans la santé ou l'impact social.",
+    url: "https://sylvain-dev.fr",
+    sameAs: ["https://github.com/SylDav"],
+    knowsAbout: ["PHP", "Laravel", "Symfony", "Vue.js", "Docker", "JavaScript", "MySQL", "API REST", "IA pour le code"],
+    jobSeekingCategory: "Développement Web",
+    seeks: {
+      "@type": "JobPosting",
+      title: "Développeur Web Confirmé",
+      description: "CDI en développement web avec préférence pour les secteurs santé et impact social",
+      employmentType: "FULL_TIME"
+    }
+  },
+  WebPage: {
+    name: "Portfolio - Sylvain DAVID",
+    description: "Portfolio de Sylvain DAVID, Développeur Web Confirmé",
+    url: "https://sylvain-dev.fr",
+    mainEntity: {
+      "@type": "Person",
+      name: "Sylvain DAVID"
+    }
+  },
+  Article: {
+    headline: data.headline || "",
+    description: data.description || "",
+    author: {
+      "@type": "Person",
+      name: "Sylvain DAVID"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Sylvain DAVID"
+    }
+  }
+};
+
+const finalData = { ...baseData, ...structuredData[type] };
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(finalData)}></script>

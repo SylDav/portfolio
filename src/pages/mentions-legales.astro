@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SEO from "../components/SEO.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import StructuredData from "../components/StructuredData.astro";
+---
+
+<BaseLayout>
+  <SEO 
+    title="Mentions Légales"
+    description="Mentions légales du site portfolio de Sylvain DAVID - Développeur Web Confirmé"
+    keywords={["mentions légales", "mentions", "légales", "sylvain david", "développeur web"]}
+    type="WebPage"
+  />
+  <StructuredData type="WebPage" data={{
+    name: "Mentions Légales - Sylvain DAVID",
+    description: "Mentions légales du site portfolio de Sylvain DAVID"
+  }} />
+  
+  <main class="min-h-screen py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <Breadcrumb 
+        items={[
+          { name: "Accueil", href: "/" },
+          { name: "Mentions Légales" }
+        ]}
+      />
+      
+      <h1 class="text-4xl font-bold text-text-main mb-8">Mentions Légales</h1>
+      
+      <div class="space-y-8 text-text-main">
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Éditeur du site</h2>
+          <div class="bg-card border border-border rounded-lg p-6 space-y-2">
+            <p><strong>Nom :</strong> Sylvain DAVID</p>
+            <p><strong>Statut :</strong> Professionnel indépendant</p>
+            <p><strong>Email :</strong> contact@sylvain-dev.fr</p>
+            <p><strong>Site web :</strong> https://sylvain-dev.fr</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Hébergement</h2>
+          <div class="bg-card border border-border rounded-lg p-6 space-y-2">
+            <p><strong>Prestataire :</strong> Vercel Inc.</p>
+            <p><strong>Adresse :</strong> 440 N Barranca Avenue #4133, Covina, CA 91723, USA</p>
+            <p><strong>Site web :</strong> https://vercel.com</p>
+            <p><strong>Type d'hébergement :</strong> Cloud Hosting</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Propriété intellectuelle</h2>
+          <div class="bg-card border border-border rounded-lg p-6 space-y-4">
+            <p>
+              L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur 
+              et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris les 
+              représentations iconographiques et photographiques.
+            </p>
+            <p>
+              La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est 
+              formellement interdite, sauf autorisation expresse de l'auteur.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Cookies</h2>
+          <div class="bg-card border border-border rounded-lg p-6 space-y-4">
+            <p>
+              Ce site n'utilise pas de cookies à des fins de tracking ou de publicité. Seuls les cookies 
+              techniques essentiels au bon fonctionnement du site peuvent être utilisés.
+            </p>
+            <p>
+              Vous pouvez à tout moment désactiver les cookies dans les paramètres de votre navigateur.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Liens externes</h2>
+          <div class="bg-card border border-border rounded-lg p-6">
+            <p>
+              Ce site peut contenir des liens vers des sites tiers. Nous déclinons toute responsabilité 
+              quant au contenu de ces sites externes.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Limitation de responsabilité</h2>
+          <div class="bg-card border border-border rounded-lg p-6">
+            <p>
+              Les informations contenues sur ce site sont aussi précises que possible et le site est 
+              mis à jour régulièrement, mais peut toutefois contenir des inexactitudes ou des omissions. 
+              L'auteur ne pourra être tenu responsable de quelconque dommage direct ou indirect 
+              résultant de l'utilisation de ce site.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Droit applicable</h2>
+          <div class="bg-card border border-border rounded-lg p-6">
+            <p>
+              Les présentes mentions légales sont soumises au droit français. En cas de litige, les 
+              tribunaux français seront seuls compétents.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold mb-4 text-accent">Contact</h2>
+          <div class="bg-card border border-border rounded-lg p-6">
+            <p>
+              Pour toute question concernant ces mentions légales, vous pouvez me contacter par email :
+              <a href="mailto:contact@sylvain-dev.fr" class="text-accent hover:underline">contact@sylvain-dev.fr</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/" class="btn-primary inline-flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Retour à l'accueil
+        </a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

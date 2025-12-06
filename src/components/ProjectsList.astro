@@ -3,43 +3,47 @@ import ProjectCard from "./ProjectCard.astro";
 import SectionTitle from "./SectionTitle.astro";
 
 const projects = [
+//   {
+//     title: "CRM Immobilier (WIP)",
+//     description: "CRM complet pour agences immobilières en développement personnel. Architecture Laravel + Vue.js avec gestion des biens, clients et tableaux de bord analytiques.",
+//     tech: ["PHP", "Laravel", "Vue.js", "MySQL", "API REST"],
+//     github: "https://github.com/SylDav/locolocaux",
+//     image: "/projects/locolocaux.png"
+//   },
   {
-    title: "CRM Immobilier",
-    description: "Application CRM complète que j'ai conçue et développée de A à Z pour les agences immobilières. Gestion des propriétaires, locataires, biens et tableaux de bord analytiques.",
-    tech: ["PHP", "Laravel", "Vue.js", "Docker", "API REST"],
-    link: "https://demo-crm-immobilier.com",
-    github: "https://github.com/sylvaindavid/crm-immobilier",
-    image: "/projects/crm-immobilier.jpg"
-  },
-  {
-    title: "Gestion Tournois Badminton",
-    description: "Application web pour l'organisation complète de tournois sportifs. Système de brackets automatisés, inscriptions en ligne et résultats en temps réel.",
-    tech: ["PHP", "Laravel", "Inertia", "Vue.js"],
-    link: "https://demo-tournois.fr",
-    github: "https://github.com/sylvaindavid/tournois-badminton",
-    image: "/projects/tournois-badminton.jpg"
+    title: "TopKalendar (WIP)",
+    description: "Application de prise de rendez-vous customisable développée en équipe. Système de réservation, notifications et interface responsive. (Code privé - projet d'équipe)",
+    tech: ["PHP", "Laravel", "Vue.js", "MySQL", "WebSocket"],
+    image: "/images/projects/topkalendar.png"
   },
   {
     title: "Blog Club Badminton",
-    description: "Site WordPress sur mesure créé pour un club sportif local. Optimisation SEO avancée, calendrier des événements et galeries photos interactives.",
-    tech: ["WordPress", "SEO", "PHP"],
+    description: "Blog WordPress bénévole pour club sportif local. Optimisation SEO, calendrier événements et galeries photos interactives.",
+    tech: ["WordPress", "SEO", "PHP", "Rédaction d'article"],
     link: "https://www.fdvvarangeville.fr",
-    image: "/projects/blog-badminton.jpg"
+    image: "/images/projects/fdvvarangeville.png"
   },
   {
-    title: "Site École Notre-Dame",
-    description: "Site institutionnel moderne développé pour un ensemble scolaire. Espace parents, actualités et système d'inscription en ligne avec performances optimisées.",
-    tech: ["WordPress", "SEO", "PHP"],
+    title: "Portfolio Personnel",
+    description: "Ce site portfolio développé avec Astro et TailwindCSS. Design moderne, animations fluides et optimisé pour le référencement.",
+    tech: ["Astro", "TailwindCSS", "JavaScript", "SEO", "Windsurf"],
+    github: "https://github.com/SylDav/portfolio",
+    image: "/images/projects/portfolio.png"
+  },
+  {
+    title: "Site Ensemble Scolaire Notre-Dame",
+    description: "Site web institutionnel freelance pour ensemble scolaire. Présentation des établissements, actualités et espace parents avec WordPress.",
+    tech: ["WordPress", "PHP", "SEO", "JavaScript", "Freelance"],
     link: "https://notredamebeauvais.com/",
-    image: "/projects/notredame-beauvais.jpg"
-  }
+    image: "/images/projects/notredame-beauvais.png"
+  },
 ];
 ---
 <section id="projects" class="py-24">
   <div class="text-center mb-16">
     <SectionTitle
-      title="Mes Réalisations"
-      subtitle="Projets personnels et freelance dont je suis particulièrement fier"
+      title="Réalisations Clés"
+      subtitle="Projets personnels, en équipe et freelance qui démontrent ma polyvalence technique"
     />
   </div>
 
@@ -51,16 +55,15 @@ const projects = [
   </div>
   
   <!-- Link to experience for more context -->
-  <div class="text-center mt-12 space-y-4">
-    <p class="text-muted text-sm">
-      Découvrez aussi <a href="#experience" class="text-accent hover:underline">mon expérience en entreprise</a> 
-      avec des projets de plus grande envergure
+  <div class="text-center mt-12">
+    <p class="text-muted mb-4">
+      Découvrez mon <a href="#experience" class="text-accent hover:underline">parcours professionnel</a> pour plus de contexte sur ces réalisations
     </p>
     <a href="#contact" class="btn-primary inline-flex items-center gap-2">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
       </svg>
-      Parlons de votre prochain projet
+      Discutons de votre prochain projet
     </a>
   </div>
 </section>
