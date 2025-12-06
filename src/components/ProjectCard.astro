@@ -1,14 +1,41 @@
 ---
-const { title, description, tech, link, github, image = "/project-placeholder.jpg" } = Astro.props;
+import { Image } from 'astro:assets';
+
+// Import des images de projets
+import topkalendarImage from '../images/projects/topkalendar.png';
+import fdvvarangevilleImage from '../images/projects/fdvvarangeville.png';
+import portfolioImage from '../images/projects/portfolio.png';
+import notredameBeauvaisImage from '../images/projects/notredame-beauvais.png';
+
+const { 
+  title, 
+  description, 
+  tech, 
+  link, 
+  github, 
+  image = "/images/project-placeholder.jpg" 
+} = Astro.props;
+
+// Mapping des images
+const imageMap: Record<string, any> = {
+  "/images/projects/topkalendar.png": topkalendarImage,
+  "/images/projects/fdvvarangeville.png": fdvvarangevilleImage,
+  "/images/projects/portfolio.png": portfolioImage,
+  "/images/projects/notredame-beauvais.png": notredameBeauvaisImage,
+};
+
+const optimizedImage = imageMap[image] || "/images/project-placeholder.jpg";
 ---
 <article class="card hover:shadow-2xl transition-all duration-300">
   <!-- Project Image -->
   <div class="relative overflow-hidden rounded-lg mb-4 h-48 bg-gradient-to-br from-accent/20 to-transparent">
-    <img 
-      src={image} 
+    <Image 
+      src={optimizedImage} 
       alt={`Screenshot du projet ${title}`}
       class="w-full h-full object-cover"
       loading="lazy"
+      width={400}
+      height={192}
     />
   </div>
 

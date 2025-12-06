@@ -1,7 +1,7 @@
 export const SEO_CONFIG = {
   siteName: "Sylvain DAVID - Développeur Web Confirmé",
   siteUrl: "https://sylvain-dev.fr",
-  defaultImage: "/me.jpeg",
+  defaultImage: "/images/me.jpeg",
   socialLinks: {
     github: "https://github.com/SylDav",
   },

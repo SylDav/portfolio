@@ -9,4 +9,5 @@ export default defineConfig({
   },
   site: "https://sylvain-dev.fr",
   trailingSlash: "never",
+  compressHTML: true,
 });
