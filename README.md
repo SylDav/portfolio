@@ -1,43 +1,76 @@
-# Astro Starter Kit: Minimal
+# Portfolio - Sylvain DAVID
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Portfolio professionnel de Sylvain DAVID, Développeur Web PHP, Laravel, Symfony et Vue.js - 5 ans d'expérience
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🎯 Objectif
 
-## 🚀 Project Structure
+Ce portfolio a été conçu pour mettre en valeur mon expertise en développement web,
+présenter mes projets, mon parcours et démontrer la qualité de mon travail.
 
-Inside of your Astro project, you'll see the following folders and files:
+Il a pour vocation de montrer ce que je sais faire, comment je travaille,
+et les technologies que j’utilise au quotidien.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Stack Technique
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Le site est développé avec :
+- Astro - Framework rapide, moderne et orienté performance
+- TailwindCSS - Design system utility-first
+- Astro Assets - Optimisation automatique des images
+- Web3Forms - Envoi de formulaire sans backend
+- Umami Analytics - Statistiques respectueuses de la vie privée
+- SEO optimisé - Métadonnées, sitemap, robots.txt, accessibilité, performances
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📁 Contenu du Portfolio
 
-Any static assets, like images, can be placed in the `public/` directory.
+Le site est construit en one-page, navigable via des ancres.
 
-## 🧞 Commands
+Il contient les sections suivantes :
+- 🧑‍🚀 Hero : Photo + présentation courte + call-to-action
+- 🧩 About : Mon parcours, mes valeurs, mes objectifs professionnels
+- 🚀 Projects : Sélection de projets professionnels et personnels
+- 💼 Experiences : Mes postes, missions, compétences utilisées
+- ✉️ Contact : Formulaire Web3Forms + liens vers mes réseaux (GitHub, LinkedIn)
+- 🧾 Footer : Mentions légales, droits, infos utiles
 
-All commands are run from the root of the project, from a terminal:
+## ▶️ Installation & Développement
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Installer les dépendances :
 
-## 👀 Want to learn more?
+`npm install`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+Lancer le projet en local :
+
+`npm run dev`
+
+
+Créer la version de production :
+
+`npm run build`
+
+
+Le site généré se trouve dans :
+
+`/dist`
+
+## 🚀 Déploiement
+
+Ce portfolio peut être hébergé n’importe où :
+- Hostinger
+- Vercel
+- Netlify
+- Cloudflare Pages
+- Hébergement FTP classique
+
+Il suffit d’exporter le contenu du dossier dist/ à la racine du serveur.
+
+## 📜 Licence
+
+### Copyright ©
+Tous les textes, images, photos et éléments graphiques de ce portfolio sont protégéset ne peuvent pas être réutilisés sans mon autorisation.
+
+## 👤 Auteur
+
+Sylvain DAVID 
+Développeur Web PHP - Laravel / Symfony 
+www.sylvain-dev.fr
