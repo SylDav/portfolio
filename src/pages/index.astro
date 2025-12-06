@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SEO from "../components/SEO.astro";
 import StructuredData from "../components/StructuredData.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
@@ -9,13 +8,7 @@ import Experiences from "../components/ExperienceList.astro";
 import Contact from "../components/ContactForm.astro";
 ---
 
-<BaseLayout>
-  <SEO 
-    title="Sylvain DAVID - Développeur Web Confirmé | PHP, Laravel, Symfony"
-    description="Développeur Web Confirmé avec 5 ans d'expérience en PHP, Laravel, Symfony et Vue.js. Autodidacte et adaptable, recherche CDI dans la santé ou l'impact social."
-    keywords={["développeur PHP CDI", "développeur Laravel santé", "développeur Symfony confirmé", "développeur Vue.js", "développeur web Amiens", "API REST", "Docker", "développeur autodidacte", "impact social", "développeur web senior"]}
-    type="WebPage"
-  />
+<BaseLayout title="Sylvain DAVID - Développeur Web Confirmé | PHP, Laravel, Symfony" description="Développeur Web Confirmé avec 5 ans d'expérience en PHP, Laravel, Symfony et Vue.js. Autodidacte et adaptable, recherche CDI dans la santé ou l'impact social." keywords={["développeur PHP CDI", "développeur Laravel santé", "développeur Symfony confirmé", "développeur Vue.js", "développeur web Amiens", "API REST", "Docker", "développeur autodidacte", "impact social", "développeur web senior"]}>
   <StructuredData type="Person" />
   
   <Hero />

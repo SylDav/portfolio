@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-const { title = "Accueil", description = "Sylvain DAVID - Développeur Web Confirmé spécialisé PHP, Laravel, Symfony et Vue.js. Recherche CDI dans la santé ou l'impact social. 5 ans d'expérience en applications web modernes." } = Astro.props;
+const { title, description = "Sylvain DAVID - Développeur Web Confirmé spécialisé PHP, Laravel, Symfony et Vue.js. Recherche CDI dans la santé ou l'impact social. 5 ans d'expérience en applications web modernes.", keywords } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import SEO from "../components/SEO.astro";
@@ -12,7 +12,7 @@ import StructuredData from "../components/StructuredData.astro";
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        <SEO title={title} description={description} />
+        <SEO title={title} description={description} keywords={keywords} />
         <StructuredData type="Person" />
         
         <!-- Favicon -->
