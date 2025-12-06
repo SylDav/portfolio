@@ -1,5 +1,5 @@
 export const SEO_CONFIG = {
-  siteName: "Sylvain DAVID - Développeur Web Confirmé",
+  siteName: "Sylvain DAVID - Développeur Web Backend PHP",
   siteUrl: "https://sylvain-dev.fr",
   defaultImage: "/images/me.jpeg",
   socialLinks: {
@@ -47,22 +47,22 @@ export const getStructuredData = (type: "Person" | "WebPage" | "Article", data?:
   const structuredData = {
     Person: {
       name: "Sylvain DAVID",
-      jobTitle: "Développeur Web Confirmé",
-      description: "Développeur Web Confirmé spécialisé PHP, Laravel, Symfony et Vue.js. Recherche CDI dans la santé ou l'impact social.",
+      jobTitle: "Développeur Web Backend PHP",
+      description: "Développeur Web Backend PHP spécialisé PHP, Laravel, Symfony et Vue.js. Recherche CDI dans la santé ou l'impact social.",
       url: SEO_CONFIG.siteUrl,
       sameAs: Object.values(SEO_CONFIG.socialLinks),
       knowsAbout: SEO_CONFIG.skills,
       jobSeekingCategory: "Développement Web",
       seeks: {
         "@type": "JobPosting",
-        title: "Développeur Web Confirmé",
+        title: "Développeur Web Backend PHP",
         description: "CDI en développement web avec préférence pour les secteurs santé et impact social",
         employmentType: "FULL_TIME"
       }
     },
     WebPage: {
       name: "Portfolio - Sylvain DAVID",
-      description: "Portfolio de Sylvain DAVID, Développeur Web Confirmé",
+      description: "Portfolio de Sylvain DAVID, Développeur Web Backend PHP",
       url: SEO_CONFIG.siteUrl,
       mainEntity: {
         "@type": "Person",

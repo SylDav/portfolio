@@ -1,10 +1,10 @@
 # Portfolio - Sylvain DAVID
 
-Portfolio professionnel de Sylvain DAVID, Développeur Web PHP, Laravel, Symfony et Vue.js - 5 ans d'expérience
+Portfolio professionnel de Sylvain DAVID, Développeur Web Backend PHP – 5 ans d'expérience
 
 ## 🎯 Objectif
 
-Ce portfolio a été conçu pour mettre en valeur mon expertise en développement web,
+Ce portfolio a été conçu pour mettre en valeur mon expertise en développement backend,
 présenter mes projets, mon parcours et démontrer la qualité de mon travail.
 
 Il a pour vocation de montrer ce que je sais faire, comment je travaille,
@@ -72,5 +72,5 @@ Tous les textes, images, photos et éléments graphiques de ce portfolio sont pr
 ## 👤 Auteur
 
 Sylvain DAVID 
-Développeur Web PHP - Laravel / Symfony 
+Développeur Backend PHP / Laravel 
 www.sylvain-dev.fr
