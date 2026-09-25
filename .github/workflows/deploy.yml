@@ -4,123 +4,25 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # --------------------------------------------------
-      # 1. Récupération du code
-      # --------------------------------------------------
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      # --------------------------------------------------
-      # 2. Node.js
-      # --------------------------------------------------
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # --------------------------------------------------
-      # 3. Installation des dépendances
-      # --------------------------------------------------
       - name: Install dependencies
         run: npm ci
 
-      # --------------------------------------------------
-      # 4. Build Astro
-      # --------------------------------------------------
       - name: Build Astro site
         run: npm run build
 
-      # --------------------------------------------------
-      # 5. Vérification du build
-      # --------------------------------------------------
-      - name: Inspect build
-        run: |
-          echo "========================================"
-          echo "COMMIT DEPLOYE"
-          echo "========================================"
-          git rev-parse HEAD
-          git log -1 --oneline
-
-          echo ""
-          echo "========================================"
-          echo "CONTENU DE DIST"
-          echo "========================================"
-          find dist -type f | sort
-
-          echo ""
-          echo "========================================"
-          echo "TAILLE DES FICHIERS"
-          echo "========================================"
-          du -ah dist | sort -h
-
-          echo ""
-          echo "========================================"
-          echo "HASH DE INDEX.HTML"
-          echo "========================================"
-          sha256sum dist/index.html
-
-      # --------------------------------------------------
-      # 6. Diagnostic du serveur FTP
-      # --------------------------------------------------
-      - name: Inspect Hostinger FTP
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y lftp
-
-          lftp -c "
-            set ftp:ssl-force false
-            set ftp:ssl-protect-data false
-            set ssl:verify-certificate no
-
-
-            open -u '${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}' '${{ secrets.FTP_HOST }}'
-
-            echo '========================================'
-            echo 'EMPLACEMENT FTP INITIAL'
-            echo '========================================'
-            pwd
-
-            echo ''
-            echo '========================================'
-            echo 'CONTENU DE LA RACINE FTP'
-            echo '========================================'
-            ls -la
-
-            echo ''
-            echo '========================================'
-            echo 'CONTENU DE PUBLIC_HTML'
-            echo '========================================'
-            cd public_html
-            pwd
-            ls -la
-
-            echo ''
-            echo '========================================'
-            echo 'FICHIER FTP DEPLOY STATE'
-            echo '========================================'
-            ls -la .ftp-deploy-sync-state.json
-
-            echo ''
-            echo '========================================'
-            echo 'INDEX.HTML DISTANT'
-            echo '========================================'
-            ls -la index.html
-
-            bye
-          "
-
-      # --------------------------------------------------
-      # 7. Déploiement FTP
-      # --------------------------------------------------
       - name: Deploy via FTP to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -130,4 +32,3 @@ jobs:
           local-dir: ./dist/
           server-dir: ./
           dangerous-clean-slate: false
-          log-level: verbose
