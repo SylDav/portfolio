@@ -79,6 +79,8 @@ jobs:
           lftp -c "
             set ftp:ssl-force false
             set ftp:ssl-protect-data false
+            set ssl:verify-certificate no
+
 
             open -u '${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}' '${{ secrets.FTP_HOST }}'
 
